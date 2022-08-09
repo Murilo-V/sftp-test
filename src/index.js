@@ -1,13 +1,11 @@
 require('dotenv').config();
-// const Client = require('ssh2-sftp-client');
+const Client = require('ssh2-sftp-client');
 
-// const config = {
-//     host: 'example.com',
-//     port: 22,
-//     username: 'red-don',
-//     password: 'my-secret'
-//   };
+const config = {
+    host: process.env.HOST,
+    port: 22,
+    username: process.env.USERNAME,
+    password: process.env.PASSWORD,
+  };
 
-// const sftp = new Client();
-
-console.log(process.env.TESTE)
+const sftp = new Client();
